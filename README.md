@@ -19,7 +19,7 @@ A modern, responsive food sharing application built with Next.js 15, featuring b
 
 ## 🚀 Live Demo
 
-Visit the live application: [Your Deployed URL Here]
+Visit the live application: (https://yvette-foodies-app.vercel.app/)
 
 ## 📋 Prerequisites
 
