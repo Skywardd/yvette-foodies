@@ -1,0 +1,181 @@
+.header {
+  display: flex;
+  padding: 3rem 2rem;
+  gap: 4rem;
+  margin: 2rem auto;
+  max-width: 75rem;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.image {
+  position: relative;
+  width: 30rem;
+  height: 20rem;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.header img {
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  animation: fade-slide-in-from-left 1s ease-out forwards;
+}
+
+.headerText {
+  padding: 0.5rem 1rem 0 1rem;
+  color: #4a4a4a;
+  max-width: 40rem;
+  animation: fade-slide-in-from-right 1s ease-out forwards;
+}
+
+.headerText h1 {
+  margin: 0 0 1rem 0;
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  background: linear-gradient(135deg, #8e8ecf, #d1a8e8);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.creator {
+  font-size: 1.2rem;
+  color: #8e8ecf;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+}
+
+.creator a {
+  background: linear-gradient(135deg, #8e8ecf, #d1a8e8);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.creator a:hover,
+.creator a:active {
+  background: linear-gradient(135deg, #6b6ba3, #a68bb8);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.summary {
+  font-size: 1.3rem;
+  font-family: 'Raleway', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.instructions {
+  font-size: 1.2rem;
+  font-family: 'Raleway', sans-serif;
+  line-height: 1.6;
+  background: rgba(255, 255, 255, 0.8);
+  color: #4a4a4a;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 3rem;
+  max-width: 75rem;
+  margin: 2rem auto;
+  animation: fade-slide-in-from-bottom 1s ease-out forwards;
+}
+
+.loading {
+  font-size: 3rem;
+  text-align: center;
+  color: #4a4a4a;
+  font-weight: bold;
+  animation: flash 1s ease-in-out infinite alternate;
+}
+
+@keyframes fade-slide-in-from-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-slide-in-from-right {
+  0% {
+    opacity: 0;
+    transform: translateX(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-slide-in-from-bottom {
+  0% {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes flash {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 1rem;
+    margin: 1rem;
+  }
+
+  .image {
+    width: 100%;
+    height: 20rem;
+    align-self: center;
+  }
+
+  .headerText {
+    padding: 0;
+    text-align: center;
+  }
+
+  .headerText h1 {
+    font-size: 2.5rem;
+  }
+
+  .creator {
+    font-size: 1.1rem;
+  }
+
+  .summary {
+    font-size: 1.2rem;
+  }
+
+  .instructions {
+    padding: 2rem 1.5rem;
+    margin: 1rem;
+    font-size: 1.1rem;
+  }
+}

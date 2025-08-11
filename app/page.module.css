@@ -1,0 +1,122 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #4a4a4a;
+  font-size: 1.5rem;
+  max-width: 50rem;
+  width: 90%;
+  margin: 4rem auto;
+  padding: 3rem 2rem;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.section h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, #8e8ecf, #d1a8e8);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section p {
+  font-family: 'Raleway', sans-serif;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+}
+
+.cta {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cta a {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #8e8ecf, #d1a8e8);
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(142, 142, 207, 0.3);
+}
+
+.cta a:hover,
+.cta a:active {
+  background: linear-gradient(135deg, #6b6ba3, #a68bb8);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(142, 142, 207, 0.4);
+}
+
+.homePage {
+  height: 100vh;
+  height: 100svh;
+  overflow: hidden;
+  position: relative;
+  width: 100vw;
+}
+
+@media (max-width: 768px) {
+  .homePage {
+    height: 100vh;
+    height: 100svh;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    touch-action: pan-x;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    margin: 2rem auto;
+    padding: 2rem 1rem;
+    font-size: 1.2rem;
+  }
+
+  .section h2 {
+    font-size: 2rem;
+  }
+
+  .section p {
+    font-size: 1.1rem;
+  }
+
+  .cta {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta a {
+    width: 100%;
+    max-width: 250px;
+    text-align: center;
+  }
+
+  .homePage {
+    height: 100vh;
+    height: 100svh;
+    overflow: hidden;
+    position: relative;
+    touch-action: manipulation;
+    width: 100vw;
+  }
+}
