@@ -128,12 +128,6 @@ export default function HeroSlides() {
 
       isAnimating.current = true;
 
-      const tl = gsap.timeline({
-        onComplete: () => {
-          isAnimating.current = false;
-        },
-      });
-
       tl.to([textRef.current, descriptionRef.current, ctaRef.current], {
         opacity: 1,
         y: -30,
