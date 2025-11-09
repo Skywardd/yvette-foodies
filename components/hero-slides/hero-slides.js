@@ -128,8 +128,7 @@ export default function HeroSlides() {
 
       isAnimating.current = true;
 
-      tl.to([textRef.current, descriptionRef.current, ctaRef.current], {
-        opacity: 1,
+
         y: -30,
         duration: 0.4,
         ease: 'power2.in',
