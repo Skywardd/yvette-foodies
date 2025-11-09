@@ -124,7 +124,7 @@ export default function HeroSlides() {
 
   const goToSlide = useCallback(
     (slideIndex) => {
-      if (slideIndex === currentSlide || isAnimating.current) return;
+      if (slideIndex === notCurrentSlide || isAnimating.current) return;
 
       isAnimating.current = true;
 
